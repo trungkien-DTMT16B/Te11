@@ -110,7 +110,7 @@
                           </div>
                         </div>
                         <p class="mb-1">Độ ẩm</p>
-                        <h4 class="card-title mb-3" id="doAm">--</h4>
+                        <h4 class="card-title mb-3" id="V0">--</h4>
                         <small class="fw-medium" id="percentHumi"></small>
                       </div>
                     </div>
@@ -281,7 +281,7 @@
   <script>
     // Lấy các phần tử HTML dựa trên ID, liên kết với giao diện người dùng
     const temp = document.getElementById('nhietDo');  // Phần tử hiển thị nhiệt độ
-    const humi = document.getElementById('doAm');  // Phần tử hiển thị độ ẩm
+    const humi = document.getElementById('V0');  // Phần tử hiển thị độ ẩm
     const turnOn = document.getElementById('turnOn');  // Nút bật đèn LED
     const turnOff = document.getElementById('turnOff');  // Nút tắt đèn LED
     const statusLed = document.getElementById('statusLed');  // Phần tử hiển thị trạng thái đèn LED
@@ -304,8 +304,8 @@
       /* Hàm callback được gọi khi có cấu hình được nhận từ server */
       onConfiguration: (configuration) => {
         // Lưu các cấu hình khi nhận được từ widget
-        configTemp = configuration.realtime_configs[0];  // Lưu cấu hình nhiệt độ
-        configHumi = configuration.realtime_configs[1];  // Lưu cấu hình độ ẩm
+        configTemp = configuration.realtime_configs[1];  // Lưu cấu hình nhiệt độ
+        configHumi = configuration.realtime_configs[0];  // Lưu cấu hình độ ẩm
         configLed = configuration.realtime_configs[2];  // Lưu cấu hình đèn LED
         actions = configuration.actions;  // Lưu các hành động điều khiển
       },
