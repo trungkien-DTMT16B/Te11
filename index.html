@@ -1,0 +1,347 @@
+<!doctype html>
+
+<html lang="en" class="light-style layout-menu-fixed layout-compact" dir="ltr" data-theme="theme-default"
+  data-assets-path="assets/" data-template="vertical-menu-template-free" data-style="light">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+
+  <title>Dashboard widget</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/img/favicon/favicon.ico" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/vendor/fonts/boxicons.css" />
+
+  <!-- Core CSS -->
+  <link rel="stylesheet" href="assets/vendor/css/core.css" class="template-customizer-core-css" />
+  <link rel="stylesheet" href="assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
+
+  <!-- Vendors CSS -->
+  <link rel="stylesheet" href="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+  <link rel="stylesheet" href="assets/vendor/libs/apex-charts/apex-charts.css" />
+
+</head>
+
+<body>
+  <!-- Layout wrapper -->
+  <div class="layout-wrapper layout-content-navbar">
+    <div class="layout-container">
+      <!-- Layout container -->
+      <div class="layout-page">
+        <!-- Content wrapper -->
+        <div class="content-wrapper">
+          <!-- Content -->
+          <div class="container-xxl flex-grow-1 container-p-y">
+            <div class="row">
+              <div class="col-lg-12 mb-6 order-0">
+                <div class="card">
+                  <div class="d-flex align-items-start row">
+                    <div class="col-sm-6">
+                      <div class="card-body">
+                        <h5 class="card-title text-primary mb-3">Congratulations EoH! 🎉</h5>
+                        <p class="mb-6">
+                          You have done 72% more sales today.<br />Check your new badge in your profile.
+                        </p>
+
+                        <a href="javascript:;" class="btn btn-sm btn-outline-primary">View Badges</a>
+                      </div>
+                    </div>
+                    <div class="col-sm-6 text-center text-sm-left">
+                      <div class="card-body pb-0 px-0 px-md-6">
+                        <img src="assets/img/illustrations/man-with-laptop.png" height="165" class="scaleX-n1-rtl"
+                          alt="View Badge User" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-12">
+                <div class="row">
+                  <div class="col mb-6">
+                    <div class="card h-100">
+                      <div class="card-body">
+                        <div class="card-title d-flex align-items-start justify-content-between mb-4">
+                          <div class="avatar flex-shrink-0">
+                            <img src="assets/img/icons/unicons/chart-success.png" alt="chart success" class="rounded" />
+                          </div>
+                          <div class="dropdown">
+                            <button class="btn p-0" type="button" id="cardOpt3" data-bs-toggle="dropdown"
+                              aria-haspopup="true" aria-expanded="false">
+                              <i class="bx bx-dots-vertical-rounded text-muted"></i>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="cardOpt3">
+                              <a class="dropdown-item" href="javascript:void(0);">View More</a>
+                              <a class="dropdown-item" href="javascript:void(0);">Delete</a>
+                            </div>
+                          </div>
+                        </div>
+                        <p class="mb-1">Nhiệt độ</p>
+                        <h4 class="card-title mb-3" id="nhietDo">--</h4>
+                        <small class="fw-medium" id="percentTemp"></small>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col mb-6">
+                    <div class="card h-100">
+                      <div class="card-body">
+                        <div class="card-title d-flex align-items-start justify-content-between mb-4">
+                          <div class="avatar flex-shrink-0">
+                            <img src="assets/img/icons/unicons/wallet-info.png" alt="wallet info" class="rounded" />
+                          </div>
+                          <div class="dropdown">
+                            <button class="btn p-0" type="button" id="cardOpt6" data-bs-toggle="dropdown"
+                              aria-haspopup="true" aria-expanded="false">
+                              <i class="bx bx-dots-vertical-rounded text-muted"></i>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="cardOpt6">
+                              <a class="dropdown-item" href="javascript:void(0);">View More</a>
+                              <a class="dropdown-item" href="javascript:void(0);">Delete</a>
+                            </div>
+                          </div>
+                        </div>
+                        <p class="mb-1">Độ ẩm</p>
+                        <h4 class="card-title mb-3" id="doAm">--</h4>
+                        <small class="fw-medium" id="percentHumi"></small>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col mb-6">
+                    <div class="card h-100">
+                      <div class="card-body">
+                        <div class="card-title d-flex align-items-start justify-content-between mb-4">
+                          <div class="avatar flex-shrink-0">
+                            <span class="avatar-initial rounded bg-label-primary"><i
+                                class="bx bx-mobile-alt"></i></span>
+                          </div>
+                          <div class="dropdown">
+                            <button class="btn p-0" type="button" id="cardOpt3" data-bs-toggle="dropdown"
+                              aria-haspopup="true" aria-expanded="false">
+                              <i class="bx bx-dots-vertical-rounded text-muted"></i>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="cardOpt3">
+                              <a class="dropdown-item" href="javascript:void(0);">View More</a>
+                              <a class="dropdown-item" href="javascript:void(0);">Delete</a>
+                            </div>
+                          </div>
+                        </div>
+                        <p class="mb-1">Control</p>
+                        <div class="mb-3">
+                          <small style="color: black;" id="statusLed"></small>
+                        </div>
+                        <button id="turnOn" type="button" class="btn btn-outline-primary">Bật đèn</button>
+                        <button id="turnOff" type="button" class="btn btn-outline-secondary">Tắt đèn</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 mb-6">
+                <div class="card h-100">
+                  <div class="card-header d-flex align-items-center justify-content-between">
+                    <h5 class="card-title m-0 me-2">Transactions</h5>
+                    <div class="dropdown">
+                      <button class="btn text-muted p-0" type="button" id="transactionID" data-bs-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <i class="bx bx-dots-vertical-rounded bx-lg"></i>
+                      </button>
+                      <div class="dropdown-menu dropdown-menu-end" aria-labelledby="transactionID">
+                        <a class="dropdown-item" href="javascript:void(0);">Last 28 Days</a>
+                        <a class="dropdown-item" href="javascript:void(0);">Last Month</a>
+                        <a class="dropdown-item" href="javascript:void(0);">Last Year</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body pt-4">
+                    <ul class="p-0 m-0">
+                      <li class="d-flex align-items-center mb-6">
+                        <div class="avatar flex-shrink-0 me-3">
+                          <img src="assets/img/icons/unicons/paypal.png" alt="User" class="rounded" />
+                        </div>
+                        <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                          <div class="me-2">
+                            <small class="d-block">Paypal</small>
+                            <h6 class="fw-normal mb-0">Send money</h6>
+                          </div>
+                          <div class="user-progress d-flex align-items-center gap-2">
+                            <h6 class="fw-normal mb-0">+82.6</h6>
+                            <span class="text-muted">USD</span>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="d-flex align-items-center mb-6">
+                        <div class="avatar flex-shrink-0 me-3">
+                          <img src="assets/img/icons/unicons/wallet.png" alt="User" class="rounded" />
+                        </div>
+                        <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                          <div class="me-2">
+                            <small class="d-block">Wallet</small>
+                            <h6 class="fw-normal mb-0">Mac'D</h6>
+                          </div>
+                          <div class="user-progress d-flex align-items-center gap-2">
+                            <h6 class="fw-normal mb-0">+270.69</h6>
+                            <span class="text-muted">USD</span>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="d-flex align-items-center mb-6">
+                        <div class="avatar flex-shrink-0 me-3">
+                          <img src="assets/img/icons/unicons/chart.png" alt="User" class="rounded" />
+                        </div>
+                        <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                          <div class="me-2">
+                            <small class="d-block">Transfer</small>
+                            <h6 class="fw-normal mb-0">Refund</h6>
+                          </div>
+                          <div class="user-progress d-flex align-items-center gap-2">
+                            <h6 class="fw-normal mb-0">+637.91</h6>
+                            <span class="text-muted">USD</span>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="d-flex align-items-center mb-6">
+                        <div class="avatar flex-shrink-0 me-3">
+                          <img src="assets/img/icons/unicons/cc-primary.png" alt="User" class="rounded" />
+                        </div>
+                        <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                          <div class="me-2">
+                            <small class="d-block">Credit Card</small>
+                            <h6 class="fw-normal mb-0">Ordered Food</h6>
+                          </div>
+                          <div class="user-progress d-flex align-items-center gap-2">
+                            <h6 class="fw-normal mb-0">-838.71</h6>
+                            <span class="text-muted">USD</span>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="d-flex align-items-center mb-6">
+                        <div class="avatar flex-shrink-0 me-3">
+                          <img src="assets/img/icons/unicons/wallet.png" alt="User" class="rounded" />
+                        </div>
+                        <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                          <div class="me-2">
+                            <small class="d-block">Wallet</small>
+                            <h6 class="fw-normal mb-0">Starbucks</h6>
+                          </div>
+                          <div class="user-progress d-flex align-items-center gap-2">
+                            <h6 class="fw-normal mb-0">+203.33</h6>
+                            <span class="text-muted">USD</span>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="d-flex align-items-center">
+                        <div class="avatar flex-shrink-0 me-3">
+                          <img src="assets/img/icons/unicons/cc-warning.png" alt="User" class="rounded" />
+                        </div>
+                        <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                          <div class="me-2">
+                            <small class="d-block">Mastercard</small>
+                            <h6 class="fw-normal mb-0">Ordered Food</h6>
+                          </div>
+                          <div class="user-progress d-flex align-items-center gap-2">
+                            <h6 class="fw-normal mb-0">-92.45</h6>
+                            <span class="text-muted">USD</span>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- / Content -->
+        </div>
+        <!-- Content wrapper -->
+      </div>
+      <!-- / Layout page -->
+    </div>
+  </div>
+  <!-- / Layout wrapper -->
+
+  <!-- Core JS -->
+  <script src="assets/vendor/libs/jquery/jquery.js"></script>
+  <script src="assets/vendor/libs/popper/popper.js"></script>
+  <script src="assets/vendor/js/bootstrap.js"></script>
+  <script src="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+  <script src="assets/vendor/js/menu.js"></script>
+  <!-- endbuild -->
+
+  <!-- Tải thư viện Era Widget -->
+  <script src="https://www.unpkg.com/@eohjsc/era-widget@1.1.3/src/index.js"></script>
+  <script>
+    // Lấy các phần tử HTML dựa trên ID, liên kết với giao diện người dùng
+    const temp = document.getElementById('nhietDo');  // Phần tử hiển thị nhiệt độ
+    const humi = document.getElementById('doAm');  // Phần tử hiển thị độ ẩm
+    const turnOn = document.getElementById('turnOn');  // Nút bật đèn LED
+    const turnOff = document.getElementById('turnOff');  // Nút tắt đèn LED
+    const statusLed = document.getElementById('statusLed');  // Phần tử hiển thị trạng thái đèn LED
+
+    // Biến để lưu cấu hình và trạng thái hiện tại
+    let configTemp = null, configHumi = null, configLed = null, newStatusLed = null, actions = [];
+
+    const eraWidget = new EraWidget();
+    eraWidget.init({
+      needRealtimeConfigs: true,         /* Cần giá trị hiện thời */
+      needHistoryConfigs: true,          /* Cần giá trị lịch sử */
+      needActions: true,                 /* Cần các hành động (ví dụ Bật/Tắt đèn) */
+      maxRealtimeConfigsCount: 3,        /* Số lượng tối đa giá trị hiện thời */
+      maxHistoryConfigsCount: 1,         /* Số lượng tối đa giá trị lịch sử */
+      maxActionsCount: 2,                /* Số lượng tối đa các hành động có thể kích hoạt */
+      minRealtimeConfigsCount: 0,        /* Số lượng tối thiểu giá trị hiện thời */
+      minHistoryConfigsCount: 0,         /* Số lượng tối thiểu giá trị lịch sử */
+      minActionsCount: 0,                /* Số lượng tối thiểu hành động */
+
+      /* Hàm callback được gọi khi có cấu hình được nhận từ server */
+      onConfiguration: (configuration) => {
+        // Lưu các cấu hình khi nhận được từ widget
+        configTemp = configuration.realtime_configs[0];  // Lưu cấu hình nhiệt độ
+        configHumi = configuration.realtime_configs[1];  // Lưu cấu hình độ ẩm
+        configLed = configuration.realtime_configs[2];  // Lưu cấu hình đèn LED
+        actions = configuration.actions;  // Lưu các hành động điều khiển
+      },
+
+      /* Hàm callback được gọi khi nhận giá trị mới từ server */
+      onValues: (values) => {
+        // Cập nhật giá trị nhận được từ widget
+        const valueTemp = values[configTemp.id].value;  // Giá trị nhiệt độ
+        const valueHumi = values[configHumi.id].value;  // Giá trị độ ẩm
+        const valueLed = values[configLed.id].value;  // Giá trị trạng thái đèn LED
+
+        // Cập nhật giao diện người dùng với giá trị mới
+        temp.innerHTML = valueTemp + ' °C';  // Hiển thị nhiệt độ
+        humi.innerHTML = valueHumi + ' %';  // Hiển thị độ ẩm
+
+        // Kiểm tra trạng thái mới của đèn LED, nếu thay đổi thì cập nhật
+        if (newStatusLed !== valueLed) {
+          newStatusLed = valueLed;
+          if (valueLed === 1) {
+            statusLed.innerHTML = 'Đèn đang bật';  // Hiển thị trạng thái đèn LED đang bật
+          } else {
+            statusLed.innerHTML = 'Đèn đang tắt';  // Hiển thị trạng thái đèn LED đang tắt
+          }
+        }
+      },
+    });
+
+    // Kích hoạt các hành động dựa trên trạng thái của công tắc
+    turnOn.addEventListener('click', () => {
+      eraWidget.triggerAction(actions[0]?.action, null);  // Kích hoạt hành động "Bật đèn"
+    });
+    turnOff.addEventListener('click', () => {
+      eraWidget.triggerAction(actions[1]?.action, null);  // Kích hoạt hành động "Tắt đèn"
+    });
+  </script>
+
+</body>
+
+</html>
